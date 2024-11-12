@@ -15,7 +15,7 @@ y_train_tensor = torch.tensor(y_train.values, dtype=torch.float32).view(-1, 1)
 # view 方法用于改变张量的形状（类似于 NumPy 的 reshape 方法）。-1 表示该维度的大小由其他维度自动推断。在这种情况下，-1 会根据 y_train 的总元素数量来计算合适的值。
 # 1 表示第二个维度的大小为 1。
 
-# 定义自定义数据集类
+# 自定义数据集类
 class FishDataset(Dataset):
     def __init__(self, X, y=None):
         self.X = X
